@@ -11,6 +11,9 @@
     },
     "product-summary/product-summary": {
       "component": "ProductSummary"
+    },
+    "store/__product-summary": {
+      "component": "ProductSummary"
     }
   }
 }

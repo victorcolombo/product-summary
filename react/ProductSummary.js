@@ -52,8 +52,8 @@ class ProductSummary extends Component {
         onMouseLeave={this.handleMouseLeave}>
         <Link
           className="pointer pa3"
-          page={'store/product'}
-          params={{ id: product.productId }}>   
+          page="store/product"
+          params={{ slug: product.linkText }}>
           <div>
             <div className="vtex-product-summary__image-container center db">
               {showBadge ? (
