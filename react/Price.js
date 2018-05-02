@@ -36,7 +36,7 @@ class Price extends Component {
     )
 
     return (
-      <div className="vtex-price tc fabriga">
+      <div className="vtex-price tc fabriga serious-black">
         {showListPrice && (
           <div className="pv1 f6-ns f7-s normal">
             {showLabels && (

@@ -51,7 +51,7 @@ class ProductSummary extends Component {
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}>
         <Link
-          className="pointer pa3"
+          className="pointer pa3 no-underline"
           page="store/product"
           params={{ slug: product.linkText }}>
           <div>
@@ -75,7 +75,7 @@ class ProductSummary extends Component {
                 />
               )}
             </div>
-            <div className="vtex-product-summary__name-container flex items-center justify-center near-black">
+            <div className="vtex-product-summary__name-container flex items-center justify-center near-black no-decoration">
               <ProductName
                 name={product.productName}
                 skuName={product.sku.name}
