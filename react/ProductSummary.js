@@ -5,13 +5,11 @@ import { isMobile } from 'react-device-detect'
 import { Link } from 'render'
 
 import BuyButton from 'vtex.storecomponents/BuyButton'
-import ProductName from 'vtex.storecomponents/ProductName'
-import Price from 'vtex.storecomponents/Price'
-import DiscountBadge from 'vtex.storecomponents/DiscountBadge'
+import { DiscountBadge, ProductName, Price } from '@vtex/product-details'
 
 import { createProduct } from './ProductFactory'
 
-import './global.css'
+import './summary.css'
 
 /**
  * Product Summary component. Summarizes the product information.
@@ -66,12 +64,12 @@ class ProductSummary extends Component {
                   />
                 </DiscountBadge>
               ) : (
-                <img
-                  className="vtex-product-summary__image"
-                  alt={product.productName}
-                  src={product.sku.image.imageUrl}
-                />
-              )}
+                  <img
+                    className="vtex-product-summary__image"
+                    alt={product.productName}
+                    src={product.sku.image.imageUrl}
+                  />
+                )}
             </div>
             <div className="vtex-product-summary__name-container flex items-center justify-center near-black">
               <ProductName
@@ -98,7 +96,8 @@ class ProductSummary extends Component {
             {!hideBuyButton &&
               (!showButtonOnHover || this.state.isHovering) && (
                 <div className="vtex-product-summary__buy-button center">
-                  <BuyButton skuId={product.sku.itemId}>
+                  <BuyButton
+                    skuId={product.sku.itemId}>
                     {buyButtonText || <FormattedMessage id="button-label" />}
                   </BuyButton>
                 </div>
