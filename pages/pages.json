@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "product-summary": {
+      "path": "/_v/product-summary",
+      "extensible": true
+    }
+  },
+  "extensions": {
+    "product-summary": {
+      "component": "ProductSummary"
+    },
+    "wishlistAddProduct": {
+      "component": "vtex.wishlist/index"          
+    }
+  }
+}
