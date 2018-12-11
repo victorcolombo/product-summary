@@ -77,8 +77,3 @@ a.clear-link {
     font-size: 0.75rem;
   }
 }
-
-.vtex-aspect-ratio {
-  padding-top: 100%;
-  background: center / contain no-repeat;
-}
