@@ -16,11 +16,15 @@
   },
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "vtex.store-components": "3.x",
     "vtex.styleguide": "9.x"
 =======
     "vtex.store-components": "2.x",
     "vtex.wishlist": "0.x"
 >>>>>>> Somethings
+=======
+    "vtex.store-components": "2.x"
+>>>>>>> Wishlist stuff
   }
 }

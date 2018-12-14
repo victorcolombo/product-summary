@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+<<<<<<< HEAD
 import { withRuntimeContext } from 'vtex.render-runtime'
 import { ProductName, ProductPrice } from 'vtex.store-components'
 
@@ -19,6 +20,23 @@ const DISPLAY_MODE_MAP = {
   inline: ProductSummaryInline,
   inlinePrice: ProductSummaryInlinePrice,
 }
+=======
+import ContentLoader from 'react-content-loader'
+import { FormattedMessage } from 'react-intl'
+import { Link, withRuntimeContext } from 'render'
+import classNames from 'classnames'
+import BuyButton from 'vtex.store-components/BuyButton'
+import CollectionBadges from 'vtex.store-components/CollectionBadges'
+import DiscountBadge from 'vtex.store-components/DiscountBadge'
+import ProductName from 'vtex.store-components/ProductName'
+import ProductPrice from 'vtex.store-components/ProductPrice'
+//import AddProduct from 'vtex.wishlist/AddProduct'
+import { ExtensionPoint } from 'render'
+import { productShape } from './propTypes'
+import Image from './components/Image'
+
+import './global.css'
+>>>>>>> Wishlist stuff
 
 /**
  * Product Summary component. Summarizes the product information.
@@ -144,6 +162,7 @@ class ProductSummary extends Component {
       isHovering: this.state.isHovering,
     }
 
+<<<<<<< HEAD
     const ProductSummaryComponent =
       DISPLAY_MODE_MAP[displayMode] || ProductSummaryNormal
     return (
@@ -160,6 +179,75 @@ class ProductSummary extends Component {
         priceProps={priceProps}
         buyButtonProps={buyButtonProps}
       />
+=======
+    console.log(product)
+
+    return (
+      <div
+        className={classes}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
+        <ExtensionPoint id="heart" skuId={path(['sku', 'itemId'], product)} productId={path(['productId'], product)}/>
+        <div className="pointer pa2">
+          <Link
+            className={linkClasses}
+            page={'store/product'}
+            params={{ slug: path(['linkText'], product) }}
+          >
+            <div className={imageContainerClasses}>
+              {path(['sku', 'image', 'imageUrl'], product)
+                ? this.renderImage()
+                : this.renderImageLoader()}
+            </div>
+            <div className={informationClasses}>
+              <div className={nameClasses}>
+                <ProductName
+                  name={path(['productName'], product)}
+                  skuName={path(['sku', 'name'], product)}
+                  brandName={path(['brand'], product)}
+                  {...this.props.name}
+                />
+              </div>
+              <div className={priceClasses}>
+                <ProductPrice
+                  listPrice={path(['ListPrice'], this.commertialOffer)}
+                  sellingPrice={path(['Price'], this.commertialOffer)}
+                  installments={path(['Installments'], this.commertialOffer)}
+                  showListPrice={showListPrice}
+                  showLabels={showLabels}
+                  showInstallments={showInstallments}
+                />
+              </div>
+            </div>
+          </Link>
+          <div className={buyButtonClasses}>
+            {showButtonOnHover ||
+              (showBuyButton && (
+                <div className="vtex-product-summary__buy-button center mw-100">
+                  {showBuyButton && (
+                    <BuyButton
+                      available={isAvailable}
+                      skuItems={
+                        path(['sku', 'itemId'], product) && [
+                          {
+                            skuId: path(['sku', 'itemId'], product),
+                            quantity: 1,
+                            seller: path(['sku', 'seller', 'sellerId'], product)
+                          }
+                        ]
+                      }
+                      isOneClickBuy={isOneClickBuy}
+                    >
+                      {buyButtonText || <FormattedMessage id="button-label" />}
+                    </BuyButton>
+                  )}
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+>>>>>>> Wishlist stuff
     )
   }
 }
