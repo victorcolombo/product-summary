@@ -14,5 +14,7 @@
   "editor.productSummary.quantity-error": "It wasn't possible to select the specified amount",
   "editor.productSummary.unit": "Unit",
   "editor.productSummary.attachmentName": "+ {quantity}x {name}",
-  "editor.productSummary.displayBuyButton.option.hover": "Show on hover (web)"
+  "editor.productSummary.displayBuyButton.option.hover": "Show on hover (web)",
+  "editor.productSummary.enableQuantitySelector.title": "Enable quantity selector",
+  "editor.productSummary.maxQuantity.title": "Quantity selector's maximum quantity"
 }

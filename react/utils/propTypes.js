@@ -57,6 +57,10 @@ export const productShape = PropTypes.shape({
   addedOptions: PropTypes.arrayOf(addedOptionShape),
   /** Quantity of item in Minicart */
   quantity: PropTypes.number,
+  /** Enable the numeric stepper */
+  enableQuantitySelector: PropTypes.bool,
+  /** Maximum quantity of the numeric stepper */
+  maxQuantity: PropTypes.number
 })
 
 const addedOptionShape = PropTypes.shape({

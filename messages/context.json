@@ -14,5 +14,7 @@
   "editor.productSummary.displayBuyButton.option.hover": "editor.productSummary.displayBuyButton.option.hover",
   "editor.productSummary.quantity-error": "editor.productSummary.quantity-error",
   "editor.productSummary.unit": "editor.productSummary.unit",
-  "editor.productSummary.attachmentName": "editor.productSummary.attachmentName"
+  "editor.productSummary.attachmentName": "editor.productSummary.attachmentName",
+  "editor.productSummary.enableQuantitySelector.title": "editor.productSummary.enableQuantitySelector.title",
+  "editor.productSummary.maxQuantity.title": "editor.productSummary.maxQuantity.title"
 }

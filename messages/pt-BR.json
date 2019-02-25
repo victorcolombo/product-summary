@@ -14,5 +14,7 @@
   "editor.productSummary.quantity-error": "Não foi possível selecionar a quantidade especificada",
   "editor.productSummary.unit": "Unidade",
   "editor.productSummary.attachmentName": "+ {quantity}x {name}",
-  "editor.productSummary.displayBuyButton.option.hover": "Mostrar ao passar o mouse (web)"
+  "editor.productSummary.displayBuyButton.option.hover": "Mostrar ao passar o mouse (web)",
+  "editor.productSummary.enableQuantitySelector.title": "Habilitar o seletor de quantidade",
+  "editor.productSummary.maxQuantity.title": "Quantidade máxima do seletor de quantidade"
 }

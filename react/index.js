@@ -21,6 +21,10 @@ const DISPLAY_MODE_MAP = {
   'inline': ProductSummaryInline,
 }
 
+const MINIMUM_NUMERIC_STEPPER_VALUE = 1
+const MAXIMUM_NUMERIC_STEPPER_VALUE = 10
+const DEFAULT_NUMERIC_STEPPER_VALUE = 1
+
 /**
  * Product Summary component. Summarizes the product information.
  */
@@ -208,12 +212,26 @@ const defaultSchema = {
       default: false,
       isLayout: true,
     },
+    enableQuantitySelector: {
+      type: 'boolean',
+      title: 'editor.productSummary.enableQuantitySelector.title',
+      isLayout: true,
+    },
     ...ProductPrice.schema.properties,
   },
 }
 
-ProductSummary.getSchema = ({ displayBuyButton }) => {
+const quantitySelectorSchema = {
+  maxQuantity: {
+    type: 'number'
+    title: 'editor.productSummary.maxQuantity.title',
+    minimum: 
+  }
+}
+
+ProductSummary.getSchema = ({ displayBuyButton, enableQuantitySelector }) => {
   const nameSchema = ProductName.schema
+  const maxQuantitySchema = enableQuantitySelector && getQuantitySelectorSchema()
   return {
     ...defaultSchema,
     properties: {
@@ -221,6 +239,7 @@ ProductSummary.getSchema = ({ displayBuyButton }) => {
       ...displayBuyButton,
       name: nameSchema,
     },
+    ...maxQuantitySchema
   }
 }
 
