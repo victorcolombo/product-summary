@@ -31,6 +31,7 @@ const ProductSummaryPrice = ({
   showLabels,
   showInstallments,
   labelSellingPrice,
+  labelListPrice,
   isLoading,
   containerClass,
 }) => {
@@ -92,6 +93,7 @@ const ProductSummaryPrice = ({
           showLabels={showLabels}
           showInstallments={showInstallments}
           labelSellingPrice={labelSellingPrice}
+          labelListPrice={labelListPrice}
         />
       )}
     </div>
@@ -111,6 +113,8 @@ ProductSummaryPrice.propTypes = {
   showInstallments: PropTypes.bool,
   /** Text of selling Price's label */
   labelSellingPrice: PropTypes.string,
+  /** Text of selling Price's label */
+  labelListPrice: PropTypes.string,
   /** Defines if the loading spinner is shown */
   isLoading: PropTypes.bool,
   /** Styles used in the container div */

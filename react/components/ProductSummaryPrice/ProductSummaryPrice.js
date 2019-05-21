@@ -33,6 +33,7 @@ const ProductSummaryPrice = ({
   showLabels,
   showInstallments,
   labelSellingPrice,
+  labelListPrice,
   showBorders,
 }) => {
   const { product, isLoading } = useContext(ProductSummaryContext)
@@ -101,6 +102,7 @@ const ProductSummaryPrice = ({
           showLabels={showLabels}
           showInstallments={showInstallments}
           labelSellingPrice={labelSellingPrice}
+          labelListPrice={labelListPrice}
         />
       )}
     </div>
@@ -118,6 +120,8 @@ ProductSummaryPrice.propTypes = {
   showInstallments: PropTypes.bool,
   /** Text of selling Price's label */
   labelSellingPrice: PropTypes.string,
+  /** Text of list Price's label */
+  labelListPrice: PropTypes.string,
   /** Set installments' visibility */
   showBorders: PropTypes.bool,
 }
@@ -128,6 +132,7 @@ ProductSummaryPrice.defaultProps = {
   showInstallments: true,
   showLabels: true,
   labelSellingPrice: '',
+  labelListPrice: '',
   showBorders: false,
 }
 
@@ -164,6 +169,11 @@ ProductSummaryPrice.getSchema = () => {
       labelSellingPrice: {
         type: 'string',
         title: 'admin/editor.productSummary.labelSellingPrice.title',
+        isLayout: false,
+      },
+      labelListPrice: {
+        type: 'string',
+        title: 'admin/editor.productSummary.labelListPrice.title',
         isLayout: false,
       },
       showBorders: {
