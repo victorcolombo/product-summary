@@ -12,6 +12,7 @@ const ProductSummaryName = ({
 }) => {
   const { product } = useContext(ProductSummaryContext)
   const productName = path(['productName'], product)
+  const productReference = path(['productReference'], product)
   const skuName = path(['sku', 'name'], product)
   const brandName = path(['brand'], product)
 
@@ -30,6 +31,7 @@ const ProductSummaryName = ({
         skuNameClass="t-small"
         loaderClass="pt5 overflow-hidden"
         name={productName}
+        productReference={productReference}
         skuName={skuName}
         brandName={brandName}
         {...showFieldsProps}
