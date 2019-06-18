@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Prop to show loading state when the product is locally persisted.
+- Prop to show muted state.
 
 ## [2.25.0] - 2019-06-10
 
