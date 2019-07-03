@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "product-potato",
-  "version": "2.25.1",
+  "version": "20.0.0",
   "title": "Product Summary",
   "description": "Product summary component",
   "defaultLocale": "pt-BR",
