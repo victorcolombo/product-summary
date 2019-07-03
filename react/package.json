@@ -1,5 +1,5 @@
 {
-  "name": "vtex.product-summary",
+  "name": "vtex.product-potato",
   "scripts": {
     "pretest": "yarn",
     "test": "vtex-test-tools test",
